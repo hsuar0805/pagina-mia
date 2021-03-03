@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<META charset="UTF=8">
+<title>Mi pagina web</title>
+<link rel="stylesheet" type="text/css" href="C:\Users\Henry Suar\Desktop\tarea pagina progra 1\css\stilo.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+</head>
+<body background="C:\Users\Henry Suar\Desktop\tarea pagina progra 1\fotos\f5.jpg">
+
+
+<header>
+<nav class="navegacion">
+<ul class="menu">
+	<li><i><b><font size=6><a href="C:\Users\Henry Suar\Desktop\tarea pagina progra 1\index.html">REGRESAR</a></li></i></b></font>
+	<li><i><b><font size=8 color="white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acerca de mi</a></li></i></b></font>
+		
+</header>
+<body>
+
+	<br>
+	<table border =3><div align="center">
+	<tr>
+
+	<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	<th><img src = "C:\Users\Henry Suar\Desktop\tarea pagina progra 1\fotos\bb.jpeg"></th>
+	<th><img src = "C:\Users\Henry Suar\Desktop\tarea pagina progra 1\fotos\tb.jpeg"></th>
+	<th><div align="center"><p><font color="white"  size=5>Nombre: Henry Benjamin Suar Cutzan</p><p>Edad : 28 años</p><p>Lugar de nacimiento: Amatitlan</p><p>Estudia : Ing. en sistemas</p></th>
+	
+</body>	
+<i><b><font size=5 color="white"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mi Musica</p></i></b></font>
+<script>
+function cambiarTrack(track) {
+   var path =  track.getAttribute("path")
+   viejo_audio = document.getElementById("reproductor")
+   audio_padre = viejo_audio.parentNode
+   audio_padre.removeChild(viejo_audio)
+   nuevo_audio = document.createElement("audio")
+   nuevo_audio.setAttribute("id","reproductor")
+   nuevo_audio.setAttribute("controls", "controls")
+  // nuevo_audio.setAttribute("autoplay", "autoplay")
+   source = document.createElement("source")
+   source.setAttribute("src", path)
+   source.setAttribute("type", "audio/mpeg")
+   source.setAttribute("id", "reproductorSource")
+   nuevo_audio.appendChild(source)
+   audio_padre.appendChild(nuevo_audio)}
+function cargarReproductor() {
+         var select = document.getElementById("selectTrack")
+         var path = select.options[0].getAttribute("path")
+   nuevo_audio = document.createElement("audio")
+   nuevo_audio.setAttribute("id","reproductor")
+   nuevo_audio.setAttribute("controls", "controls")       
+   source = document.createElement("source")
+   source.setAttribute("src", path)
+   source.setAttribute("type", "audio/mpeg")
+   source.setAttribute("id", "reproductorSource")
+   nuevo_audio.appendChild(source)
+   padre = document.getElementById("reproductorBox")
+   padre.appendChild(nuevo_audio)
+}
+</script>
+<div id="reproductorBox"></div>
+<select id = "selectTrack" multiple onchange="cambiarTrack(this.options[this.selectedIndex]);">
+<option path="C:\Users\Henry Suar\Desktop\tarea pagina progra 1\musica\secrets.mp3">One Republic - Secrets</option>
+<option path="C:\Users\Henry Suar\Desktop\tarea pagina progra 1\musica\roxane.mp3">The Police - Roxane</option>
+<option path="C:\Users\Henry Suar\Desktop\tarea pagina progra 1\musica\lonely.mp3">System of a down - Lonely Day</option>
+<option path="C:\Users\Henry Suar\Desktop\tarea pagina progra 1\musica\rixton.mp3">Rixton - Me and my broken heart</option>
+</select>
+<script>cargarReproductor();</script>
+
+<body>
+<table border =3><div align="center">
+	<tr>
+	<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	<th><img src = "C:\Users\Henry Suar\Desktop\tarea pagina progra 1\fotos\t.jpeg"></th>
+	<th><img src = "C:\Users\Henry Suar\Desktop\tarea pagina progra 1\fotos\bbb.jpeg"></th>
+	<th><div align="center"><p><font color="white"  size=5>Soy poco sociable me gusta musica en ingles como pueden observar en mi playlist, tengo una perrita se llama tammy que le encanta dormir actualment trabajo en Zeta Gas Guatemala  donde desempeño el puesto de encargado de call center soy estudiante de Ingenieria en Sistemas  </th>
+	<th><video src = "C:\Users\Henry Suar\Desktop\tarea pagina progra 1\fotos\ta.mp4"autoplay muted loop width="350" height="300"></video></th>
+	
+
+</html>
